@@ -15,7 +15,6 @@ export default function Home() {
     onCompleted: () => console.log("completed"),
   });
 
-
   return (
     <div className="container">
       <Head>
