@@ -1,12 +1,6 @@
-import { useMutation } from "@apollo/client";
 import axios from "axios";
 import { useRouter } from "next/router";
-import PageBanner from "../../components/Common/PageBanner";
-import About from "../../components/HomeOne/About";
 import Footer from "../../components/Layouts/Footer";
-import Navbar from "../../components/Layouts/Navbar";
-import client from "../../utils/apollo-client";
-import { unsubscribeUserQuery } from "../../utils/constants";
 
 const Phished = () => {
   const router = useRouter();
