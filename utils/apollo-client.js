@@ -8,7 +8,7 @@ console.log(publicRuntimeConfig.API_URL);
 console.log(publicRuntimeConfig.API_URL);
 
 const client = new ApolloClient({
-  uri: process.env.API_URL,
+  uri: publicRuntimeConfig.API_URL,
   cache: new InMemoryCache(),
 });
 
