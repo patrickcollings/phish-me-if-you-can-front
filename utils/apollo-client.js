@@ -8,7 +8,7 @@ console.log(publicRuntimeConfig.API_URL);
 console.log(publicRuntimeConfig.API_URL);
 
 const client = new ApolloClient({
-  uri: "http://localhost:8080/graphql",
+  uri: process.env.API_URL,
   cache: new InMemoryCache(),
 });
 
