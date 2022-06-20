@@ -4,9 +4,9 @@
     "description": "Jumpx - React Next.js AI & IT Startup Template",
     "main": "index.js",
     "scripts": {
-        "dev": "next",
+        "dev": "next --port 3001",
         "build": "next build",
-        "start": "next start",
+        "start": "next start --port 3001",
         "export": "next export"
     },
     "author": "EnvyTheme.com",

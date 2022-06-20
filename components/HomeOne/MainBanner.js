@@ -3,23 +3,36 @@ import { useState } from "react";
 import { createUserQuery } from "../../utils/constants";
 import RegisterForm from "./RegisterForm";
 
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
+console.log(publicRuntimeConfig.GAME_URL);
+
 const MainBanner = () => {  
     return (
       <section className="main-banner-area main-banner-area-one">
         <div className="container-fluid">
-          <div className="row align-items-center" style={{padding: '0 1rem'}}>
+          <div className="row align-items-center" style={{ padding: "0 1rem" }}>
             <div className="col-lg-6">
               <div className="banner-text">
-                <h1>Phish Me If You Can</h1>
+                <h1>Phish Me If You Can
+                </h1>
                 <p>
                   The last line of defence is you. Train yourself to become more
-                  aware of phishing scams using our free platform.
+                  aware of phishing scams with this free simulation.
                 </p>
               </div>
             </div>
 
             <div className="col-lg-6">
-              <RegisterForm />
+              {/* <RegisterForm /> */}
+              <div style={{display: 'flex', justifyContent: 'center'}}>
+                <a href={publicRuntimeConfig.GAME_URL}>
+                  <button type="submit" className="default-btn btn-two" style={{fontSize: '33px'}}>
+                    Start Test
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>

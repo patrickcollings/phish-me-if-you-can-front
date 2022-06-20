@@ -7,5 +7,6 @@ module.exports = {
   trailingSlash: true,
   publicRuntimeConfig: {
     API_URL: process.env.API_URL,
+    GAME_URL: process.env.GAME_URL,
   },
 };
