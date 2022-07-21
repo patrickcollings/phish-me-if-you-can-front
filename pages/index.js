@@ -9,23 +9,25 @@ import WhatWeOffer from '../components/HomeOne/WhatWeOffer'
 import Testimonials from '../components/Common/Testimonials'
 import News from '../components/Common/News'
 import Footer from '../components/Layouts/Footer'
+import Newsletter from '../components/Common/Newsletter'
 
 const Index = () => {
     return (
-        <>
-            <Navbar />
-            <MainBanner />
-            <Features />
-            {/* <About />
+      <>
+        <Navbar />
+        <MainBanner />
+        <Features />
+        <Newsletter />
+        {/* <About />
             <WhyChooseUs />
             <Services />
             <MakeYourBusiness />
             <WhatWeOffer />
             <Testimonials />
             <News /> */}
-            <Footer />
-        </>
-    )
+        <Footer />
+      </>
+    );
 }
 
 export default Index
