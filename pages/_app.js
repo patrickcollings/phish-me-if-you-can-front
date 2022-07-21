@@ -41,7 +41,7 @@ export default class MyApp extends App {
                   name="viewport"
                   content="width=device-width, initial-scale=1"
                 />
-                <title>Phish Me If You</title>
+                <title>Phish Me If You Can</title>
               </Head>
 
               <Component {...pageProps} />
