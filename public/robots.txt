@@ -1,0 +1,4 @@
+Sitemap: https://www.phishmeifyoucan.com/sitemap.xml
+
+User-agent: *
+Allow: /*

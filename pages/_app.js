@@ -41,7 +41,9 @@ export default class MyApp extends App {
                   name="viewport"
                   content="width=device-width, initial-scale=1"
                 />
-                <title>Phish Me If You Can</title>
+                <meta name="description" content="Free Phishing Simulated Game using real email scams. Become more aware of scammers." />
+                <title>Phish Me If You Can - Phishing Simulator</title>
+                <link rel="canonical" href="https://www.phishmeifyoucan.com" />
               </Head>
 
               <Component {...pageProps} />
