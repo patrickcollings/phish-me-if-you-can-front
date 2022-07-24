@@ -15,8 +15,99 @@ class FaqContent extends Component {
               <div className="row align-items-center">
                 <div className="col-lg-8">
                   <div className="faq-accordion">
-                    <Accordion allowZeroExpanded preExpanded={["d"]}>
+                    <Accordion allowZeroExpanded preExpanded={["a"]}>
+                      <AccordionItem uuid="a">
+                        <AccordionItemHeading>
+                          <AccordionItemButton>
+                            What is Phish Me If You Can?
+                          </AccordionItemButton>
+                        </AccordionItemHeading>
+                        <AccordionItemPanel>
+                          <p>
+                            It is a simple game that consists of a simulated
+                            email inbox. The goal is to find all of the scam
+                            emails and add them to your scambox. By playing the
+                            game periodically a person will become more aware of
+                            what to look for in the latest email phishing scams
+                            that go around.
+                          </p>
+                        </AccordionItemPanel>
+                      </AccordionItem>
+                      <AccordionItem uuid="e">
+                        <AccordionItemHeading>
+                          <AccordionItemButton>
+                            What is Phishing?
+                          </AccordionItemButton>
+                        </AccordionItemHeading>
+                        <AccordionItemPanel>
+                          <p>
+                            Phishing is a type of social engineering where a
+                            criminal sends a fraudulent message designed to
+                            trick a person into revealing sensitive information
+                          </p>
+                        </AccordionItemPanel>
+                      </AccordionItem>
+                      <AccordionItem uuid="b">
+                        <AccordionItemHeading>
+                          <AccordionItemButton>
+                            What happens with my results?
+                          </AccordionItemButton>
+                        </AccordionItemHeading>
+                        <AccordionItemPanel>
+                          <p>
+                            Nothing! No results or personal information is
+                            returned to our servers. Your own results are stored
+                            in your browser so that when you return you'll be
+                            able to see how you previously performed.
+                          </p>
+                        </AccordionItemPanel>
+                      </AccordionItem>
+                      <AccordionItem uuid="c">
+                        <AccordionItemHeading>
+                          <AccordionItemButton>
+                            Where did the phishing emails come from?
+                          </AccordionItemButton>
+                        </AccordionItemHeading>
+                        <AccordionItemPanel>
+                          <p>
+                            These phishing emails are a combination of ones that
+                            I have found in my own email inbox over the years
+                            and common emails that others have posted online.
+                          </p>
+                        </AccordionItemPanel>
+                      </AccordionItem>
                       <AccordionItem uuid="d">
+                        <AccordionItemHeading>
+                          <AccordionItemButton>
+                            Does everyone playing the game receive the same
+                            emails?
+                          </AccordionItemButton>
+                        </AccordionItemHeading>
+                        <AccordionItemPanel>
+                          <p>
+                            Yes. On the first of each month the set of emails
+                            will rotate but everyone playing the game that month
+                            will receive the same emails as everyone else.{" "}
+                          </p>
+                        </AccordionItemPanel>
+                      </AccordionItem>
+                      {/* <AccordionItem uuid="d">
+                        <AccordionItemHeading>
+                          <AccordionItemButton>
+                            What happens if I get 'phished'
+                          </AccordionItemButton>
+                        </AccordionItemHeading>
+                        <AccordionItemPanel>
+                          <p>
+                            This is not meant to be an intimidating service,
+                            think of it more as a game. If you do end up
+                            clicking a link then you will arrive at a page on
+                            this website with some tips and tricks on how to
+                            avoid falling for it again!
+                          </p>
+                        </AccordionItemPanel>
+                      </AccordionItem>
+                      {/* <AccordionItem uuid="d">
                         <AccordionItemHeading>
                           <AccordionItemButton>
                             What happens if I get 'phished'
@@ -110,7 +201,7 @@ class FaqContent extends Component {
                           <p>oliver.m.taylor1@gmail.com</p>
                           <p>contact@phishmeifyoucan.com</p>
                         </AccordionItemPanel>
-                      </AccordionItem>
+                      </AccordionItem> */}
                     </Accordion>
                   </div>
                 </div>

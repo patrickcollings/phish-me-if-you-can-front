@@ -57,17 +57,17 @@ class Navbar extends Component {
 
                   <div className={classOne} id="navbarSupportedContent">
                     <ul className="navbar-nav m-auto">
-                      {/* <li className="nav-item">
+                      <li className="nav-item">
                         <Link href="/" activeClassName="active">
                           <a className="nav-link">Home</a>
                         </Link>
-                      </li> */}
+                      </li>
 
-                      {/* <li className="nav-item">
+                      <li className="nav-item">
                         <Link href="/faq" activeClassName="active">
                           <a className="nav-link">FAQ</a>
                         </Link>
-                      </li> */}
+                      </li>
                     </ul>
                   </div>
                 </div>

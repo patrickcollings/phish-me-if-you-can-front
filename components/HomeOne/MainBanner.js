@@ -15,20 +15,27 @@ const MainBanner = () => {
           <div className="row align-items-center" style={{ padding: "0 1rem" }}>
             <div className="col-lg-6">
               <div className="banner-text">
-                <h1>Phish Me If You Can
-                </h1>
+                <h1>The free phishing simulator</h1>
                 <p>
-                  The last line of defence is you. Train yourself to become more
-                  aware of phishing scams with this free simulation.
+                  Train yourself to avoid phishing scams in this mock email
+                  inbox game.
+                </p>
+                <p>
+                  Using real world examples of phishing email scams, over time you
+                  will become more aware of what to look out for.
                 </p>
               </div>
             </div>
 
             <div className="col-lg-6">
               {/* <RegisterForm /> */}
-              <div style={{display: 'flex', justifyContent: 'center'}}>
+              <div style={{ display: "flex", justifyContent: "center" }}>
                 <a href={publicRuntimeConfig.GAME_URL}>
-                  <button type="submit" className="default-btn btn-two" style={{fontSize: '33px'}}>
+                  <button
+                    type="submit"
+                    className="default-btn btn-two"
+                    style={{ fontSize: "33px" }}
+                  >
                     Start Test
                   </button>
                 </a>
