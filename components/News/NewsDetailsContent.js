@@ -35,7 +35,7 @@ export default function NewsDetailsContent({ fields }) {
 
                 {/* <h2>{fields.title}</h2> */}
                 <div>
-                    <ReactMarkdown>{fields.body}</ReactMarkdown>
+                    <ReactMarkdown>{fields && fields.body}</ReactMarkdown>
                 </div>
               </div>
 
