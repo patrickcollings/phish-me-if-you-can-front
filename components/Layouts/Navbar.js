@@ -64,6 +64,18 @@ class Navbar extends Component {
                       </li>
 
                       <li className="nav-item">
+                        <Link href="/blog" activeClassName="active">
+                          <a className="nav-link">Blog</a>
+                        </Link>
+                      </li>
+
+                      <li className="nav-item">
+                        <Link href="https://play.phishmeifyoucan.com" activeClassName="active">
+                          <a className="nav-link">Play</a>
+                        </Link>
+                      </li>
+
+                      <li className="nav-item">
                         <Link href="/faq" activeClassName="active">
                           <a className="nav-link">FAQ</a>
                         </Link>
