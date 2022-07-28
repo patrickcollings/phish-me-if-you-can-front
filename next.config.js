@@ -8,8 +8,10 @@ const ContentSecurityPolicy = `
   font-src 'self';  
 `;
 
+console.log('node env', process.env.NODE_ENV);
+
 const securityHeaders =
-  process.env.NODE_ENV !== "production"
+  process.env.NODE_ENV === "development"
     ? [
         // had to add one origin so that next could compile
         {
