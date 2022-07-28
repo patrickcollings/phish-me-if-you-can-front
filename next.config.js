@@ -8,26 +8,35 @@ const ContentSecurityPolicy = `
   font-src 'self';  
 `;
 
-const securityHeaders = [
-  {
-    key: "Content-Security-Policy",
-    value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
-  },
-  {
-    key: "X-Frame-Options",
-    value: "SAMEORIGIN",
-  },
-  {
-    key: "Strict-Transport-Security",
-    value: "max-age=63072000; includeSubDomains; preload",
-  },
-];
+const securityHeaders =
+  process.env.NODE_ENV !== "production"
+    ? [
+        // had to add one origin so that next could compile
+        {
+          key: "X-Frame-Options",
+          value: "SAMEORIGIN",
+        },
+      ]
+    : [
+        {
+          key: "Content-Security-Policy",
+          value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
+        },
+        {
+          key: "X-Frame-Options",
+          value: "SAMEORIGIN",
+        },
+        {
+          key: "Strict-Transport-Security",
+          value: "max-age=63072000; includeSubDomains; preload",
+        },
+      ];
 
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
-  trailingSlash: true,
+  // trailingSlash: true,
   publicRuntimeConfig: {
     API_URL: process.env.API_URL,
     GAME_URL: process.env.GAME_URL,
