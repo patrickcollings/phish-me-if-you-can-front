@@ -3,6 +3,8 @@ import Navbar from '../components/Layouts/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Footer from '../components/Layouts/Footer';
 import { useRouter } from 'next/router';
+import { NextSeo } from "next-seo";
+
 
 export default function PrivacyPolicy() {
     const router = useRouter();

@@ -3,11 +3,12 @@ import Navbar from "../components/Layouts/Navbar";
 import PageBanner from "../components/Common/PageBanner";
 import NewsGridCard from "../components/News/NewsGridCard";
 import Footer from "../components/Layouts/Footer";
+import { NextSeo } from "next-seo";
+
 
 const contentful = require("contentful");
 
 import getConfig from "next/config";
-import Head from "next/head";
 import { useRouter } from "next/router";
 const { publicRuntimeConfig } = getConfig();
 

@@ -5,6 +5,8 @@ import FaqContent from '../components/Faq/FaqContent';
 import AskQuestionForm from '../components/Faq/AskQuestionForm';
 import Footer from '../components/Layouts/Footer';
 import { useRouter } from 'next/router';
+import { NextSeo } from "next-seo";
+
 
 export default function Faq() {
     const router = useRouter();
