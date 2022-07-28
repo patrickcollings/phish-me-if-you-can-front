@@ -2,10 +2,12 @@ import PageBanner from "../../components/Common/PageBanner";
 import Footer from "../../components/Layouts/Footer";
 import Navbar from "../../components/Layouts/Navbar";
 import NewsDetailsContent from "../../components/News/NewsDetailsContent";
+import { NextSeo } from "next-seo";
 
 const contentful = require("contentful");
 
 import getConfig from "next/config";
+import { useRouter } from "next/router";
 const { publicRuntimeConfig } = getConfig();
 
 const client = contentful.createClient({
@@ -36,16 +38,18 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export default function ArticleDetails({fields}) {
+
+  const router = useRouter();
+  const canonicalUrl = (`https://www.phishmeifyoucan.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content={fields.title}
-        />
-        <title>{fields.title} | Phish Me If You Can</title>
-      </Head>
+      <NextSeo 
+        description={fields.title} 
+        title={fields.title} 
+        canonical={canonicalUrl}
+      />
+
       <Navbar />
       <PageBanner
         pageTitle={fields.title}

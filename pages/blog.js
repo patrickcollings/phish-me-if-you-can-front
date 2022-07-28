@@ -8,6 +8,7 @@ const contentful = require("contentful");
 
 import getConfig from "next/config";
 import Head from "next/head";
+import { useRouter } from "next/router";
 const { publicRuntimeConfig } = getConfig();
 
 const client = contentful.createClient({
@@ -16,16 +17,18 @@ const client = contentful.createClient({
 });
 
 export default function Blog({entries}) {
+    const router = useRouter();
+    const canonicalUrl = (
+      `https://www.phishmeifyoucan.com` +
+      (router.asPath === "/" ? "" : router.asPath)
+    ).split("?")[0];
     return (
       <>
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta
-            name="description"
-            content="Articles, guides and the latest news in the world of scamming and phishing."
-          />
-          <title>Blog | Phish Me If You Can</title>
-        </Head>
+        <NextSeo
+          description="Articles, guides and the latest news in the world of scamming and phishing."
+          title="Blog | Phish Me If You Can"
+          canonical={canonicalUrl}
+        />
         <Navbar />
         <PageBanner
           pageTitle="Blog"

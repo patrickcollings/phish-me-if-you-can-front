@@ -2,22 +2,21 @@ import React, { Component } from 'react';
 import Navbar from '../components/Layouts/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Footer from '../components/Layouts/Footer';
+import { useRouter } from 'next/router';
 
-class PrivacyPolicy extends Component {
-    render() {
+export default function PrivacyPolicy() {
+    const router = useRouter();
+    const canonicalUrl = (
+      `https://www.phishmeifyoucan.com` +
+      (router.asPath === "/" ? "" : router.asPath)
+    ).split("?")[0];
         return (
           <>
-            <Head>
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
-              />
-              <meta
-                name="description"
-                content="Privacy policy for PhishMeIfYouCan"
-              />
-              <title>Privacy Policy | Phish Me If You Can</title>
-            </Head>
+            <NextSeo
+              description="Privacy policy for PhishMeIfYouCan"
+              title="Privacy Policy | Phish Me If You Can"
+              canonical={canonicalUrl}
+            />
 
             <Navbar />
             <PageBanner
@@ -548,7 +547,4 @@ class PrivacyPolicy extends Component {
             <Footer />
           </>
         );
-    }
 }
-
-export default PrivacyPolicy;

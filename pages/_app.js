@@ -42,6 +42,7 @@ export default class MyApp extends App {
                   content="width=device-width, initial-scale=1"
                 />
                 <meta name="description" content="Free Phishing Simulated Game using real email scams. Become more aware of scammers." />
+                
                 <title>Phish Me If You Can - Phishing Simulator</title>
               </Head>
 

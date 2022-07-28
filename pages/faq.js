@@ -4,35 +4,29 @@ import PageBanner from '../components/Common/PageBanner';
 import FaqContent from '../components/Faq/FaqContent';
 import AskQuestionForm from '../components/Faq/AskQuestionForm';
 import Footer from '../components/Layouts/Footer';
+import { useRouter } from 'next/router';
 
-class Faq extends Component {
-    render() {
-        return (
-          <>
-            <Head>
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
-              />
-              <meta
-                name="description"
-                content="Frequently asked questions about the PhishMeIfYouCan game."
-              />
-              <title>FAQ | Phish Me If You Can</title>
-            </Head>
+export default function Faq() {
+    const router = useRouter();
+    const canonicalUrl = (`https://www.phishmeifyoucan.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
 
-            <Navbar />
-            <PageBanner
-              pageTitle="Frequently Asked Questions"
-              homePageUrl="/"
-              homePageText="Home"
-              activePageText="Frequently Asked Questions"
-            />
-            <FaqContent />
-            <Footer />
-          </>
-        );
-    }
+    return (
+        <>
+        <NextSeo
+            description="Frequently asked questions about the PhishMeIfYouCan game."
+            title="FAQ | Phish Me If You Can"
+            canonical={canonicalUrl}
+        />
+
+        <Navbar />
+        <PageBanner
+            pageTitle="Frequently Asked Questions"
+            homePageUrl="/"
+            homePageText="Home"
+            activePageText="Frequently Asked Questions"
+        />
+        <FaqContent />
+        <Footer />
+        </>
+    );
 }
-
-export default Faq;
