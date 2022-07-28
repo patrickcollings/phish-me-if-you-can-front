@@ -38,15 +38,23 @@ export const getStaticProps = async ({ params }) => {
 export default function ArticleDetails({fields}) {
   return (
     <>
-                <Navbar />
-                <PageBanner 
-                    pageTitle={fields.title} 
-                    homePageUrl="/blog" 
-                    homePageText="Articles" 
-                    activePageText={fields.title} 
-                /> 
-                <NewsDetailsContent fields={fields} />
-                <Footer />
-            </>
-  )
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content={fields.title}
+        />
+        <title>{fields.title} | Phish Me If You Can</title>
+      </Head>
+      <Navbar />
+      <PageBanner
+        pageTitle={fields.title}
+        homePageUrl="/blog"
+        homePageText="Articles"
+        activePageText={fields.title}
+      />
+      <NewsDetailsContent fields={fields} />
+      <Footer />
+    </>
+  );
 }

@@ -8,17 +8,29 @@ import Footer from '../components/Layouts/Footer';
 class Faq extends Component {
     render() {
         return (
-            <>
-                <Navbar />
-                <PageBanner 
-                    pageTitle="Frequently Asked Questions" 
-                    homePageUrl="/" 
-                    homePageText="Home" 
-                    activePageText="Frequently Asked Questions" 
-                /> 
-                <FaqContent />
-                <Footer />
-            </>
+          <>
+            <Head>
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1"
+              />
+              <meta
+                name="description"
+                content="Frequently asked questions about the PhishMeIfYouCan game."
+              />
+              <title>FAQ | Phish Me If You Can</title>
+            </Head>
+
+            <Navbar />
+            <PageBanner
+              pageTitle="Frequently Asked Questions"
+              homePageUrl="/"
+              homePageText="Home"
+              activePageText="Frequently Asked Questions"
+            />
+            <FaqContent />
+            <Footer />
+          </>
         );
     }
 }

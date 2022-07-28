@@ -7,6 +7,18 @@ class PrivacyPolicy extends Component {
     render() {
         return (
           <>
+            <Head>
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1"
+              />
+              <meta
+                name="description"
+                content="Privacy policy for PhishMeIfYouCan"
+              />
+              <title>Privacy Policy | Phish Me If You Can</title>
+            </Head>
+
             <Navbar />
             <PageBanner
               pageTitle="Privacy Policy"
@@ -115,11 +127,11 @@ class PrivacyPolicy extends Component {
                   <strong>Website</strong> refers to Phish Me If You Can,
                   accessible from{" "}
                   <a
-                    href="https://phishmeifyoucan.com"
+                    href="https://www.phishmeifyoucan.com"
                     rel="external nofollow noopener"
                     target="_blank"
                   >
-                    https://phishmeifyoucan.com
+                    https://www.phishmeifyoucan.com
                   </a>
                 </p>
               </li>
@@ -530,7 +542,7 @@ class PrivacyPolicy extends Component {
               contact us:
             </p>
             <ul>
-              <li>By email: phishme.contact@gmail.com</li>
+              <li>By email: contact@phishmeifyoucan.com</li>
             </ul>
 
             <Footer />
