@@ -8,7 +8,7 @@ import ReactMarkdown from "react-markdown";
 export default function NewsDetailsContent({ fields }) {
   return (
     <section className="news-details-area ptb-100">
-      <div className="container">
+      <div className="container" style={{maxWidth: '600px'}}>
         <div className="row">
           <div className="col-lg-12 col-md-12">
             <div className="blog-details-desc">

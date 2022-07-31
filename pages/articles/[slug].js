@@ -41,6 +41,7 @@ export default function ArticleDetails({fields}) {
 
   const router = useRouter();
   const canonicalUrl = (`https://www.phishmeifyoucan.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+  console.log('canonical url', canonicalUrl);
 
   return (
     <>
