@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "next --port 3001",
         "build": "next build",
+        "postbuild": "next-sitemap",
         "start": "next start --port 3001",
         "export": "next export"
     },
@@ -33,6 +34,7 @@
         "sweetalert2-react-content": "^4.2.0"
     },
     "devDependencies": {
-        "@netlify/plugin-nextjs": "^4.0.0-rc.2"
+        "@netlify/plugin-nextjs": "^4.0.0-rc.2",
+        "next-sitemap": "^3.1.15"
     }
 }

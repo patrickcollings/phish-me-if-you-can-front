@@ -1,4 +1,9 @@
-Sitemap: https://www.phishmeifyoucan.com/sitemap.xml
-
+# *
 User-agent: *
-Allow: /*
+Allow: /
+
+# Host
+Host: https://www.phishmeifyoucan.com
+
+# Sitemaps
+Sitemap: https://www.phishmeifyoucan.com/sitemap.xml
