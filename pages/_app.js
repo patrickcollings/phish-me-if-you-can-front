@@ -13,6 +13,7 @@ import Loader from '../components/Shared/Loader';
 import GoTop from '../components/Shared/GoTop';
 import client from '../utils/apollo-client';
 import { ApolloProvider } from "@apollo/client";
+import Script from "next/script";
 
 export default class MyApp extends App {
 
@@ -35,13 +36,31 @@ export default class MyApp extends App {
 
         return (
           <>
+            <Script
+              strategy="lazyOnload"
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+            />
+
+            <Script strategy="lazyOnload">
+              {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+            </Script>
             <ApolloProvider client={client}>
               <Head>
                 <meta
                   name="viewport"
                   content="width=device-width, initial-scale=1"
                 />
-                <meta name="description" content="Free Phishing Simulated Game using real email scams. Become more aware of scammers." />
+                <meta
+                  name="description"
+                  content="Free Phishing Simulated Game using real email scams. Become more aware of scammers."
+                />
                 <link rel="canonical" href="https://www.phishmeifyoucan.com" />
                 <title>Phish Me If You Can - Phishing Simulator</title>
               </Head>
