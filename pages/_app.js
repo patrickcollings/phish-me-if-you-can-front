@@ -36,13 +36,14 @@ export default class MyApp extends App {
 
         return (
           <>
-            <Script
-              strategy="lazyOnload"
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-            />
+            <ApolloProvider client={client}>
+              <Script
+                strategy="lazyOnload"
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+              />
 
-            <Script strategy="lazyOnload">
-              {`
+              <Script strategy="lazyOnload">
+                {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
@@ -50,8 +51,7 @@ export default class MyApp extends App {
                     page_path: window.location.pathname,
                     });
                 `}
-            </Script>
-            <ApolloProvider client={client}>
+              </Script>
               <Head>
                 <meta
                   name="viewport"

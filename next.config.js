@@ -2,7 +2,8 @@ const path = require('path')
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self';
+  script-src 'self' *.googletagmanager.com/ *.google-analytics.com/ 'unsafe-eval' 'unsafe-inline';
+  connect-src 'self' *.googletagmanager.com/ *.google-analytics.com/ 'unsafe-eval' 'unsafe-inline';
   child-src www.phishmeifyoucan.com;
   style-src 'self' www.phishmeifyoucan.com;
   font-src 'self';  
