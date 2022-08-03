@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { publicRuntimeConfig } from '../../next.config';
 import Link from '../../utils/ActiveLink';
 
 class Navbar extends Component {
@@ -16,11 +17,14 @@ class Navbar extends Component {
     }
     componentDidMount() {
         let elementId = document.getElementById("navbar");
+        let elementId2 = document.getElementById("action-button");
         document.addEventListener("scroll", () => {
             if (window.scrollY > 170) {
                 elementId.classList.add("is-sticky");
+                elementId2.classList.remove("hide-action-button");
             } else {
                 elementId.classList.remove("is-sticky");
+                elementId2.classList.add("hide-action-button");
             }
         });
         window.scrollTo(0, 0);
@@ -69,11 +73,14 @@ class Navbar extends Component {
                         </Link>
                       </li>
 
-                      <li className="nav-item">
-                        <Link href="https://play.phishmeifyoucan.com" activeClassName="active">
+                      {/* <li className="nav-item" id="action-button">
+                        <Link
+                          href="https://play.phishmeifyoucan.com"
+                          activeClassName="active"
+                        >
                           <a className="nav-link">Play</a>
                         </Link>
-                      </li>
+                      </li> */}
 
                       <li className="nav-item">
                         <Link href="/faq" activeClassName="active">
@@ -81,6 +88,18 @@ class Navbar extends Component {
                         </Link>
                       </li>
                     </ul>
+                  </div>
+
+                  <div style={{position: 'absolute', right: '10px'}} id="action-button" className="hide-action-button">
+                    <a href={publicRuntimeConfig.GAME_URL}>
+                      <button
+                        type="submit"
+                        className="default-btn btn-two"
+                        style={{ fontSize: "15px", padding: '12px 25px' }}
+                      >
+                        Play The Game
+                      </button>
+                    </a>
                   </div>
                 </div>
               </nav>

@@ -36,7 +36,7 @@ const MainBanner = () => {
                     className="default-btn btn-two"
                     style={{ fontSize: "33px" }}
                   >
-                    Start Test
+                    Play the game
                   </button>
                 </a>
               </div>
