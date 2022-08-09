@@ -6,9 +6,9 @@ class WhyChooseUs extends Component {
             <section className="choose-ue-area pt-100">
                 <div className="container">
                     <div className="section-title">
-                        <span>Why Choose Us</span>
-                        <h2>Our Platform Takes Away The Hard Process Of Creating Your Website</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nisi rem quo itaque minus dolorem ratione vero, quisquam reiciendis quia atque eos aspernatur.</p>
+                        <span>PhishMeIfYouCan</span>
+                        <h2>So why should you play this game?</h2>
+                        <p>It's simple.. So that you don't get scammed.</p>
                     </div>
 
                     <div className="row align-items-center">

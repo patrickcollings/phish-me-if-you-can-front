@@ -68,19 +68,16 @@ class Navbar extends Component {
                       </li>
 
                       <li className="nav-item">
+                        <Link href="/about" activeClassName="active">
+                          <a className="nav-link">About</a>
+                        </Link>
+                      </li>
+
+                      <li className="nav-item">
                         <Link href="/blog" activeClassName="active">
                           <a className="nav-link">Blog</a>
                         </Link>
                       </li>
-
-                      {/* <li className="nav-item" id="action-button">
-                        <Link
-                          href="https://play.phishmeifyoucan.com"
-                          activeClassName="active"
-                        >
-                          <a className="nav-link">Play</a>
-                        </Link>
-                      </li> */}
 
                       <li className="nav-item">
                         <Link href="/faq" activeClassName="active">
@@ -90,12 +87,16 @@ class Navbar extends Component {
                     </ul>
                   </div>
 
-                  <div style={{position: 'absolute', right: '10px'}} id="action-button" className="hide-action-button">
+                  <div
+                    style={{ position: "absolute", right: "10px" }}
+                    id="action-button"
+                    className="hide-action-button"
+                  >
                     <a href={publicRuntimeConfig.GAME_URL}>
                       <button
                         type="submit"
                         className="default-btn btn-two"
-                        style={{ fontSize: "15px", padding: '12px 25px' }}
+                        style={{ fontSize: "15px", padding: "12px 25px" }}
                       >
                         Play The Game
                       </button>
