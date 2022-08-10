@@ -10,7 +10,7 @@ class PageBanner extends Component {
             <div className="page-title-area item-bg1">
                 <div className="container">
                     <div className="page-title-content">
-                        <h2>{pageTitle}</h2>
+                        <h1>{pageTitle}</h1>
                         <ul>
                             <li>
                                 <Link href={homePageUrl}>
