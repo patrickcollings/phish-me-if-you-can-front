@@ -17,7 +17,6 @@ export default function PrivacyPolicy() {
             <NextSeo
               description="Privacy policy for PhishMeIfYouCan"
               title="Privacy Policy | Phish Me If You Can"
-              canonical={canonicalUrl}
             />
 
             <Navbar />

@@ -48,7 +48,6 @@ export default function ArticleDetails({fields}) {
       <NextSeo 
         description={fields.title} 
         title={fields.title} 
-        canonical={canonicalUrl}
       />
 
       <Navbar />

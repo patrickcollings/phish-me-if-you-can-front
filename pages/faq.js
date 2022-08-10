@@ -17,7 +17,6 @@ export default function Faq() {
         <NextSeo
             description="Frequently asked questions about the PhishMeIfYouCan game."
             title="FAQ | Phish Me If You Can"
-            canonical={canonicalUrl}
         />
 
         <Navbar />

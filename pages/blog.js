@@ -28,7 +28,6 @@ export default function Blog({entries}) {
         <NextSeo
           description="Articles, guides and the latest news in the world of scamming and phishing."
           title="Blog | Phish Me If You Can"
-          canonical={canonicalUrl}
         />
         <Navbar />
         <PageBanner

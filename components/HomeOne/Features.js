@@ -3,9 +3,9 @@ import Link from 'next/link'
 const Features = () => {
         return (
           <div className="features-area pt-100 pb-70">
-            <h1 style={{ textAlign: "center", paddingBottom: "1rem" }}>
+            <h2 style={{ textAlign: "center", paddingBottom: "1rem" }}>
               How the test works
-            </h1>
+            </h2>
             <div className="container">
               {/* <div className="row">
                 <div className="col-lg-4 col-sm-6 p-0">
