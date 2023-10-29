@@ -11,9 +11,9 @@ class Newsletter extends Component {
               >
                 <div className="col-lg-5">
                   <div className="newsletter-wrap">
-                    <h2>Sign Up To The Free Newsletter</h2>
+                    <h2>Thanks!</h2>
 
-                    <form
+                    {/* <form
                       className="newsletter-form"
                       action="https://phishmeifyoucan.us7.list-manage.com/subscribe/post"
                       method="POST"
@@ -38,7 +38,7 @@ class Newsletter extends Component {
                       <button className="default-btn" type="submit">
                         Subscribe
                       </button>
-                    </form>
+                    </form> */}
                   </div>
                 </div>
 
@@ -47,13 +47,6 @@ class Newsletter extends Component {
                     <img src="/images/newsletter-img.png" alt="Image" />
                   </div>
                 </div>
-
-                {/* <div className="col-lg-5">
-                            <div className="call-us">
-                                <h2>Sign Up To The Free Newsletter</h2>
-                                <span>+882-569-756</span>
-                            </div>
-                        </div> */}
               </div>
             </div>
 
